@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter pairing code"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/codeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="6-digit code"
+        android:inputType="number"
+        android:maxLength="6"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:letterSpacing="0.3"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/enrollBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pair this phone"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/enrollStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="#8b90a0" />
+</LinearLayout>

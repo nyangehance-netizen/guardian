@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guardian — Parent Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ---------- Auth screen ---------- -->
+  <div id="auth" class="auth-wrap">
+    <div class="card auth-card">
+      <h1 class="logo">🛡️ Guardian</h1>
+      <p class="muted">Parent dashboard</p>
+      <div id="authErr" class="err hidden"></div>
+      <input id="email" type="email" placeholder="Email" autocomplete="username" />
+      <input id="password" type="password" placeholder="Password" autocomplete="current-password" />
+      <input id="name" type="text" placeholder="Your name (sign-up only)" class="signup-only hidden" />
+      <button id="loginBtn" class="btn primary">Log in</button>
+      <button id="registerBtn" class="btn ghost">Create account</button>
+    </div>
+  </div>
+
+  <!-- ---------- Main app ---------- -->
+  <div id="app" class="hidden">
+    <header class="topbar">
+      <span class="logo sm">🛡️ Guardian</span>
+      <div class="spacer"></div>
+      <span id="whoami" class="muted"></span>
+      <button id="logoutBtn" class="btn ghost sm">Log out</button>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="side-head">
+          <span>Devices</span>
+          <button id="addDeviceBtn" class="btn primary xs">+ Add</button>
+        </div>
+        <ul id="deviceList" class="device-list"></ul>
+      </aside>
+
+      <section id="detail" class="detail">
+        <div class="empty muted">Select a device, or add your child's phone to begin.</div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ---------- Add-device modal ---------- -->
+  <div id="addModal" class="modal hidden">
+    <div class="card modal-card">
+      <h2>Add a child device</h2>
+      <input id="childName" type="text" placeholder="Child's name" />
+      <select id="platform">
+        <option value="android">Android</option>
+        <option value="ios">iOS</option>
+      </select>
+      <div class="row">
+        <button id="createDeviceBtn" class="btn primary">Create</button>
+        <button id="cancelAddBtn" class="btn ghost">Cancel</button>
+      </div>
+      <div id="pairResult" class="pair hidden">
+        <p class="muted">Open the Guardian app on your child's phone and enter this pairing code:</p>
+        <div id="pairCode" class="paircode"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

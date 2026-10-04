@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Device Admin policy set. When the parent activates this during setup, the app
+  gains the ability to enforce password quality and (critically) the user can no
+  longer uninstall the app from Settings without first deactivating admin — and
+  DEVICE_ADMIN_DISABLE_REQUESTED lets us warn the parent when that is attempted.
+
+  For the strongest lock-down (block uninstall entirely, block safe mode / factory
+  reset, force-enable the VPN), provision the app as Device Owner via QR/ADB on a
+  freshly-reset device — see android-child/README.md. Device Owner uses the same
+  receiver class with DevicePolicyManager calls.
+-->
+<device-admin xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-policies>
+        <force-lock />
+        <watch-login />
+        <disable-camera />
+        <limit-password />
+    </uses-policies>
+</device-admin>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!--
+      Family Controls capability. This entitlement must be requested from Apple at
+      https://developer.apple.com/contact/request/family-controls-distribution
+      A development build can use the non-distribution variant via Xcode's
+      "Signing & Capabilities" > "+ Capability" > "Family Controls".
+    -->
+    <key>com.apple.developer.family-controls</key>
+    <true/>
+</dict>
+</plist>

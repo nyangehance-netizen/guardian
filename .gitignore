@@ -1,0 +1,15 @@
+# Node
+node_modules/
+backend/guardian-data.json
+npm-debug.log*
+
+# Android / Gradle
+.gradle/
+**/build/
+local.properties
+*.apk
+*.keystore
+
+# Misc
+.DS_Store
+*.log

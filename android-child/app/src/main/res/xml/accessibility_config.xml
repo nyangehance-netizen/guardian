@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Accessibility config. This lets the service observe window/app changes so it can
+  detect which app just came to the foreground and immediately close blocked ones.
+  Android requires the user (parent, during setup) to turn this on explicitly in
+  Settings > Accessibility. A Device Owner setup can keep it from being turned off.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowsChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagDefault|flagRetrieveInteractiveWindows"
+    android:canRetrieveWindowContent="true"
+    android:notificationTimeout="100"
+    android:description="@string/accessibility_desc" />

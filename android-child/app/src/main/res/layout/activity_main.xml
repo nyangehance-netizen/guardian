@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🛡️ Guardian setup"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="12dp"
+            android:textSize="15sp"
+            android:fontFamily="monospace" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:paddingTop="8dp" android:text="Complete these steps with your parent:" android:textStyle="bold"/>
+
+        <Button android:id="@+id/btnEnroll" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="1. Pair with parent code" />
+        <Button android:id="@+id/btnAdmin" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2. Enable device admin (uninstall protection)" />
+        <Button android:id="@+id/btnAccessibility" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="3. Turn on Accessibility (app blocking)" />
+        <Button android:id="@+id/btnUsage" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="4. Grant Usage access (time limits)" />
+        <Button android:id="@+id/btnOverlay" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="5. Allow display over apps (block screen)" />
+        <Button android:id="@+id/btnVpn" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="6. Enable web filter (VPN)" />
+        <Button android:id="@+id/btnStart" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="7. Start protection" />
+    </LinearLayout>
+</ScrollView>
